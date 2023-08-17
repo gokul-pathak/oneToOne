@@ -26,3 +26,9 @@ Route::get('/insert', function(){
     $address = new Address(['name'=>'1254 BGL-PKR-XYZ']);
     $user->address()->save($address);
 });
+
+Route::get('/update', function(){
+    $address = Address::where('user_id', 1)->first();
+    $address->name="Pokhara 11 fulbari 77888";
+    $address->save();
+});
