@@ -32,3 +32,8 @@ Route::get('/update', function(){
     $address->name="Pokhara 11 fulbari 77888";
     $address->save();
 });
+
+Route::get('/read', function(){
+    $user = User::findOrFail(1);
+    echo $user->address->name;
+});
