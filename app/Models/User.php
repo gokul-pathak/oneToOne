@@ -44,6 +44,6 @@ class User extends Authenticatable
     ];
 
     public function address(){
-        return $this->hasOne('App\Modles\Address');
+        return $this->hasOne('App\Models\Address');
     }
 }
